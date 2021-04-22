@@ -1,5 +1,22 @@
 @import "_navbar.scss";
 
 header {
-  background: url('../img/header-image-homepage.jpg');
+  height: 685px;
+  background: url('../img/header-image-homepage.jpg') no-repeat top;
+  background-size: cover;
+  position: relative;
+  .title {
+    width: 35%;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    h1 {
+      font-size: 60px;
+      font-weight: 300;
+    }
+    button {
+      @include btn($secondary-color, $btn-color);
+      padding: 10px 30px;
+    }
+  }
 }

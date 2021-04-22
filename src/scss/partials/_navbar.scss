@@ -17,17 +17,15 @@ header {
         display: flex;
         li {
           &:hover {
-            color: $secondary-color;
+            color: $btn-color;
             cursor: pointer;
           }
         }
       }
       button {
-        border: none;
-        background-color: $secondary-color;
+        @include btn($secondary-color, $btn-color);
         padding: 10px 30px;
         font-size: 12px;
-        letter-spacing: 1px;
         &:hover,
         :focus {
           width: 220px;

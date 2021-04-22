@@ -3,8 +3,18 @@
   .text-white {
     color: #FFF;
   }
+  .text-lightgrey {
+    color: $secondary-color;
+  }
   .text-black {
     color: #000;
+  }
+  .text-pri-color {
+    color: $primary-color;
+  }
+
+  .text-btn-color {
+    color: $btn-color;
   }
   // TEXT
   // BACKGROUND

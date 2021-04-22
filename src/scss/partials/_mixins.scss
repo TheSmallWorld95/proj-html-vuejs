@@ -5,3 +5,7 @@
 @mixin img-width($width) {
   width: $width;
 }
+@mixin btn ($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+}
