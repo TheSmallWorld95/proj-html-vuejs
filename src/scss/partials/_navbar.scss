@@ -1,0 +1,40 @@
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include container-center(90%);
+    .logo {
+      img {
+        @include img-width(200px);
+      }
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      ul {
+        display: flex;
+        li {
+          &:hover {
+            color: $secondary-color;
+            cursor: pointer;
+          }
+        }
+      }
+      button {
+        border: none;
+        background-color: $secondary-color;
+        padding: 10px 30px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        &:hover,
+        :focus {
+          width: 220px;
+          height: 50px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

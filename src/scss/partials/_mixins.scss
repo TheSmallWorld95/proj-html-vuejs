@@ -1,0 +1,7 @@
+@mixin container-center($width) {
+  width: $width;
+  margin: 0 auto;
+}
+@mixin img-width($width) {
+  width: $width;
+}
