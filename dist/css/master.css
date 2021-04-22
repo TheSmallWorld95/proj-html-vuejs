@@ -27,27 +27,27 @@ h5 {
 }
 
 h1 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h3 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h4 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h5 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h6 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .text-white {
@@ -67,11 +67,35 @@ h6 {
 }
 
 .text-pri-color {
-  color: #41474F;
+  color: #7c858f;
 }
 
 .text-btn-color {
   color: #39afbb;
+}
+
+.text-facebook {
+  color: #3b5998;
+}
+
+.text-twitter {
+  color: #00acee;
+}
+
+.text-instagram {
+  color: #00587a;
+}
+
+.bg-lightgrey {
+  background-color: #f1efef;
+}
+
+.bg-grey {
+  background-color: #7C858F;
+}
+
+.bg-white {
+  background-color: #FFF;
 }
 
 .m-1 {
@@ -905,7 +929,7 @@ header nav .nav-links ul li:hover {
   cursor: pointer;
 }
 header nav .nav-links button {
-  color: #f1efef;
+  color: #bcbcbd;
   background-color: #39afbb;
   padding: 10px 30px;
   font-size: 12px;
@@ -936,7 +960,7 @@ header .title p {
   line-height: normal;
 }
 header .title button {
-  color: #f1efef;
+  color: #bcbcbd;
   background-color: #39afbb;
   padding: 10px 30px;
 }
@@ -961,11 +985,52 @@ main .welcome-info {
 main .welcome-info .welcome-card img {
   width: 25%;
 }
-main .welcome-info .welcome-card h5 {
+main .welcome-info .welcome-card h4 {
   font-size: 16px;
   padding-top: 15px;
+  text-transform: uppercase;
 }
 main .welcome-info .welcome-card p {
   font-size: 13px;
   padding-top: 10px;
+}
+
+main hr {
+  width: 40%;
+  margin: 0 auto;
+  height: 2px;
+}
+main .doctors-info {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+}
+main .doctors-info .doctors-card {
+  width: calc(100% / 3 - 15px);
+  margin: 0 auto;
+}
+main .doctors-info .doctors-card img {
+  width: 100%;
+}
+main .doctors-info .doctors-card .card-info h5 {
+  font-size: 15px;
+  color: #7c858f;
+  padding-bottom: 15px;
+}
+main .doctors-info .doctors-card .card-info h6 {
+  color: #7c858f;
+  font-size: 14px;
+  padding-bottom: 35px;
+}
+main .doctors-info .doctors-card .card-info p {
+  color: #bcbcbd;
+  font-size: 13px;
+  padding-bottom: 35px;
+}
+main .doctors-info .doctors-card .card-info ul {
+  display: flex;
+}
+main .doctors-info .doctors-card .card-info ul li {
+  font-size: 30px;
+  padding-right: 10px;
 }

@@ -4,7 +4,7 @@
     color: #FFF;
   }
   .text-lightgrey {
-    color: $secondary-color;
+    color: #f1efef;
   }
   .text-grey {
     color: #7C858F;
@@ -19,8 +19,27 @@
   .text-btn-color {
     color: $btn-color;
   }
+  .text-facebook {
+    color: 	#3b5998;
+  }
+  .text-twitter {
+    color: 	#00acee;
+  }
+  .text-instagram {
+    color: 	#00587a;
+  }
+
   // TEXT
   // BACKGROUND
+  .bg-lightgrey {
+    background-color: #f1efef;
+  }
+  .bg-grey {
+    background-color: #7C858F;
+  }
+  .bg-white {
+    background-color: #FFF
+  }
 
   // BACKGROUND
 // COLOR

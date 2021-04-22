@@ -6,7 +6,7 @@ header {
     @include container-center(90%);
     .logo {
       img {
-        @include img-center(200px);
+        width: 200px;
       }
     }
     .nav-links {
