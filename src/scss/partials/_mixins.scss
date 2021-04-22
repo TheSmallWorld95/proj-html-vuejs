@@ -2,8 +2,9 @@
   width: $width;
   margin: 0 auto;
 }
-@mixin img-width($width) {
+@mixin img-center($width) {
   width: $width;
+
 }
 @mixin btn ($color, $bg-color) {
   color: $color;

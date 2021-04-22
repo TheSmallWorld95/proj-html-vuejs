@@ -6,6 +6,9 @@
   .text-lightgrey {
     color: $secondary-color;
   }
+  .text-grey {
+    color: #7C858F;
+  }
   .text-black {
     color: #000;
   }
@@ -24,7 +27,7 @@
 // MARGIN & PADDING
 $types: m, p;
 @each $spacing in $types {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 20 {
     .#{$spacing}-#{$i} {
       @if $spacing == m {
         margin: 5px * $i;
@@ -36,7 +39,7 @@ $types: m, p;
 }
 $types: m, p;
 @each $spacing in $types {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 20 {
     .#{$spacing}t-#{$i} {
       @if $spacing == m {
         margin-top: 5px * $i;
@@ -48,7 +51,7 @@ $types: m, p;
 }
 $types: m, p;
 @each $spacing in $types {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 20 {
     .#{$spacing}r-#{$i} {
       @if $spacing == m {
         margin-right: 5px * $i;
@@ -60,7 +63,7 @@ $types: m, p;
 }
 $types: m, p;
 @each $spacing in $types {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 20 {
     .#{$spacing}b-#{$i} {
       @if $spacing == m {
         margin-bottom: 5px * $i;
@@ -72,7 +75,7 @@ $types: m, p;
 }
 $types: m, p;
 @each $spacing in $types {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 20 {
     .#{$spacing}l-#{$i} {
       @if $spacing == m {
         margin-left: 5px * $i;
@@ -91,5 +94,8 @@ $types: m, p;
 // TEXT-STYLE
 .text-uppercase {
   text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
 }
 // TEXT-STYLE
