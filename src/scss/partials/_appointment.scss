@@ -1,0 +1,60 @@
+main {
+  .appointment {
+    background: url('../img/make-an-appointment.jpg') no-repeat center;
+    .appointment-form {
+      @include container-center(30%);
+      button {
+        width: 100%;
+        @include btn(#f1efef, $btn-color);
+        padding: 10px 30px;
+        margin-bottom: 150px;
+        &:hover,
+        :focus {
+          cursor: pointer;
+        }
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .date {
+          &::-webkit-datetime-edit { color: $tertiary-color; };
+          &::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            opacity: 0.8;
+            filter: invert(1);
+          };
+        }
+        input {
+          width: calc(100% / 2 - 10px);
+        }
+        input,
+        textarea {
+          border: 1px solid $tertiary-color;
+          background-color: inherit;
+          padding: 10px;
+          margin-bottom: 30px;
+          resize: none;
+          outline: none;
+          color: $tertiary-color;
+          &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $tertiary-color;
+            opacity: 1; /* Firefox */
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+          }
+          :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $tertiary-color;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+          }
+          ::-ms-input-placeholder { /* Microsoft Edge */
+            color: $tertiary-color;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}

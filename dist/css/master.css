@@ -1127,3 +1127,87 @@ main .facilities .facilities-info .facilities-card button:hover,
 main .facilities .facilities-info .facilities-card button :focus {
   cursor: pointer;
 }
+
+main .appointment {
+  background: url("../img/make-an-appointment.jpg") no-repeat center;
+}
+main .appointment .appointment-form {
+  width: 30%;
+  margin: 0 auto;
+}
+main .appointment .appointment-form button {
+  width: 100%;
+  color: #f1efef;
+  background-color: #816CB2;
+  padding: 10px 30px;
+  margin-bottom: 150px;
+}
+main .appointment .appointment-form button:hover,
+main .appointment .appointment-form button :focus {
+  cursor: pointer;
+}
+main .appointment .appointment-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .appointment .appointment-form form .date::-webkit-datetime-edit {
+  color: #f1efef;
+}
+main .appointment .appointment-form form .date::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.8;
+  filter: invert(1);
+}
+main .appointment .appointment-form form input {
+  width: calc(100% / 2 - 10px);
+}
+main .appointment .appointment-form form input,
+main .appointment .appointment-form form textarea {
+  border: 1px solid #f1efef;
+  background-color: inherit;
+  padding: 10px;
+  margin-bottom: 30px;
+  resize: none;
+  outline: none;
+  color: #f1efef;
+}
+main .appointment .appointment-form form input::-moz-placeholder, main .appointment .appointment-form form textarea::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #f1efef;
+  opacity: 1;
+  /* Firefox */
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+main .appointment .appointment-form form input:-ms-input-placeholder, main .appointment .appointment-form form textarea:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #f1efef;
+  opacity: 1;
+  /* Firefox */
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+main .appointment .appointment-form form input::placeholder,
+main .appointment .appointment-form form textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #f1efef;
+  opacity: 1;
+  /* Firefox */
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+main .appointment .appointment-form form input :-ms-input-placeholder,
+main .appointment .appointment-form form textarea :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #f1efef;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+main .appointment .appointment-form form input ::-ms-input-placeholder,
+main .appointment .appointment-form form textarea ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #f1efef;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}

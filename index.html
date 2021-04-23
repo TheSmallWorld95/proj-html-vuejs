@@ -10,8 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/css/master.css">
 </head>
-<body>
+<body id="root">
   <header>
+    {{ contacts[1].name}}
     <nav class="pt-5">
       <div class="logo">
         <img src="./dist/img/medical_logo_1x_light.png" alt="">
@@ -153,15 +154,15 @@
         </div>
       </div>
     </section>
-    <section class="facilities">
-      <div class="intro text-center text-pri-color">
+    <section class="facilities text-lightgrey">
+      <div class="intro text-center">
         <img src="./dist/img/icon-7.png" alt="">
         <h3 class="text-uppercase pt-4 pb-6">Tour our facilities</h3>
         <hr class="text-grey bg-grey mb-6">
         <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
         <img src="./dist/img/play-icon.png" alt="">
       </div>
-      <div class="facilities-info text-center text-white">
+      <div class="facilities-info text-center">
         <div class="facilities-card bg-card-lightblue">
           <h4>Emergency Care</h4>
           <img src="./dist/img/wave-divider.png" alt="">
@@ -183,14 +184,20 @@
       </div>
     </section>
     <section class="appointment">
-      <div class="intro text-center text-pri-color pt-15">
-        <img src="./dist/img/icon-5.png" alt="">
-        <h3 class="text-uppercase pt-4 pb-6">Meet our doctors</h3>
+      <div class="intro text-center text-lightgrey pt-15">
+        <h3 class=" pt-4 pb-6">Make An Appointment</h3>
         <hr class="text-grey bg-grey mb-6">
         <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
       </div>
       <div class="appointment-form">
-        
+        <form class="" action="index.html" method="post">
+          <input type="text" name="Name" placeholder="Name*">
+          <input type="email" name="Name" placeholder="Email*">
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <input class="date" type="date" name="Name" placeholder="How can we help?*">
+          <textarea name="name" rows="6" cols="80" placeholder="How can we help?*"></textarea>
+        </form>
+        <button class="text-uppercase" type="button" name="button">Make an appointment</button>
       </div>
     </section>
     <section class="carousel">
@@ -210,6 +217,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./dist/js/dati.js" charset="utf-8"></script>
   <script src="./dist/js/main.js" charset="utf-8"></script>
 
 </body>
