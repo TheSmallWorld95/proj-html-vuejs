@@ -1,0 +1,28 @@
+main {
+  .facilities {
+    background: url('../img/paralax-bg-tour-facilities.jpg') no-repeat bottom;
+    .intro {
+      padding: 150px 0;
+    }
+    .facilities-info {
+      @include container-center(100%);
+      @include card-conteiner(facilities, (100% / 3), 10%);
+      .facilities-card {
+        padding: 50px 40px;
+        h4 {
+          text-transform: none;
+          padding-bottom: 20px;
+        }
+        button {
+          @include btn(#f1efef, inherit);
+          padding: 10px 30px;
+          border: 2px solid #FFF;
+          &:hover,
+          :focus {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -71,7 +71,7 @@ h6 {
 }
 
 .text-btn-color {
-  color: #39afbb;
+  color: #816CB2;
 }
 
 .text-facebook {
@@ -96,6 +96,18 @@ h6 {
 
 .bg-white {
   background-color: #FFF;
+}
+
+.bg-card-lightblue {
+  background-color: #239f9d;
+}
+
+.bg-card-blue {
+  background-color: #1395dd;
+}
+
+.bg-card-darkblue {
+  background-color: #007ec2;
 }
 
 .m-1 {
@@ -912,6 +924,7 @@ header nav {
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  height: 65px;
 }
 header nav .logo img {
   width: 200px;
@@ -925,12 +938,12 @@ header nav .nav-links ul {
   display: flex;
 }
 header nav .nav-links ul li:hover {
-  color: #39afbb;
+  color: #816CB2;
   cursor: pointer;
 }
 header nav .nav-links button {
-  color: #bcbcbd;
-  background-color: #39afbb;
+  color: #f1efef;
+  background-color: #816CB2;
   padding: 10px 30px;
   font-size: 12px;
 }
@@ -960,9 +973,13 @@ header .title p {
   line-height: normal;
 }
 header .title button {
-  color: #bcbcbd;
-  background-color: #39afbb;
+  color: #f1efef;
+  background-color: #816CB2;
   padding: 10px 30px;
+}
+header .title button:hover,
+header .title button :focus {
+  cursor: pointer;
 }
 
 main .intro {
@@ -979,8 +996,10 @@ main .welcome-info {
   width: 50%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .welcome-info .welcome-card {
+  width: 25%;
 }
 main .welcome-info .welcome-card img {
   width: 25%;
@@ -1033,4 +1052,78 @@ main .doctors-info .doctors-card .card-info ul {
 main .doctors-info .doctors-card .card-info ul li {
   font-size: 30px;
   padding-right: 10px;
+}
+main .doctors-info .doctors-card .card-info ul li:hover,
+main .doctors-info .doctors-card .card-info ul li :focus {
+  cursor: pointer;
+}
+
+main .services-info {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .services-info .services-card {
+  width: 33.3333333333%;
+}
+main .services-info .services-card img {
+  width: 25%;
+}
+main .services-info .services-card h4 {
+  font-size: 16px;
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+main .services-info .services-card p {
+  font-size: 13px;
+  padding-top: 10px;
+}
+main .services-info .services-card {
+  padding-bottom: 100px;
+}
+
+main .facilities {
+  background: url("../img/paralax-bg-tour-facilities.jpg") no-repeat bottom;
+}
+main .facilities .intro {
+  padding: 150px 0;
+}
+main .facilities .facilities-info {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .facilities .facilities-info .facilities-card {
+  width: 33.3333333333%;
+}
+main .facilities .facilities-info .facilities-card img {
+  width: 10%;
+}
+main .facilities .facilities-info .facilities-card h4 {
+  font-size: 16px;
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+main .facilities .facilities-info .facilities-card p {
+  font-size: 13px;
+  padding-top: 10px;
+}
+main .facilities .facilities-info .facilities-card {
+  padding: 50px 40px;
+}
+main .facilities .facilities-info .facilities-card h4 {
+  text-transform: none;
+  padding-bottom: 20px;
+}
+main .facilities .facilities-info .facilities-card button {
+  color: #f1efef;
+  background-color: inherit;
+  padding: 10px 30px;
+  border: 2px solid #FFF;
+}
+main .facilities .facilities-info .facilities-card button:hover,
+main .facilities .facilities-info .facilities-card button :focus {
+  cursor: pointer;
 }

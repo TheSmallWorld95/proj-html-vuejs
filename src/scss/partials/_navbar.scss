@@ -4,6 +4,7 @@ header {
     justify-content: space-between;
     align-items: center;
     @include container-center(90%);
+    height: 65px;
     .logo {
       img {
         width: 200px;
@@ -23,7 +24,7 @@ header {
         }
       }
       button {
-        @include btn($secondary-color, $btn-color);
+        @include btn(#f1efef, $btn-color);
         padding: 10px 30px;
         font-size: 12px;
         &:hover,

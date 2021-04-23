@@ -6,3 +6,22 @@
   color: $color;
   background-color: $bg-color;
 }
+@mixin card-conteiner($name, $width, $img-width) {
+  display: flex;
+  flex-wrap: wrap;
+  .#{$name}-card {
+    width: $width;
+    img {
+      width: $img-width;
+    }
+    h4 {
+      font-size: 16px;
+      padding-top: 15px;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 13px;
+      padding-top: 10px;
+    }
+  }
+}

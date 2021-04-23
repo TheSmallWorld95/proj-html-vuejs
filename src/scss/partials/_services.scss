@@ -1,0 +1,9 @@
+main {
+  .services-info {
+    @include container-center(50%);
+    @include card-conteiner(services, (100% / 3), 25%);
+    .services-card {
+      padding-bottom: 100px;
+    }
+  }
+}

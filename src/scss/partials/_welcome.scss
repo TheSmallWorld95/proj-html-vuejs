@@ -10,22 +10,6 @@ main {
   }
   .welcome-info {
     @include container-center(50%);
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    .welcome-card {
-      img {
-        width: 25%;
-      }
-      h4 {
-        font-size: 16px;
-        padding-top: 15px;
-        text-transform: uppercase;
-      }
-      p {
-        font-size: 13px;
-        padding-top: 10px;
-      }
-    }
+    @include card-conteiner(welcome, (100% / 4), 25%);
   }
 }

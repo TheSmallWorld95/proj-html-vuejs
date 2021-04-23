@@ -17,8 +17,12 @@ header {
       line-height: normal;
     }
     button {
-      @include btn($secondary-color, $btn-color);
+      @include btn(#f1efef, $btn-color);
       padding: 10px 30px;
+      &:hover,
+      :focus {
+        cursor: pointer;
+      }
     }
   }
 }

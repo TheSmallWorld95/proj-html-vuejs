@@ -34,6 +34,10 @@ main {
           li {
             font-size: 30px;
             padding-right: 10px;
+            &:hover,
+            :focus {
+              cursor: pointer;
+            }
           }
         }
       }
