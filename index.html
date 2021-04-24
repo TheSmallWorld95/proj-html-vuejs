@@ -10,214 +10,264 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/css/master.css">
 </head>
-<body id="root">
-  <header>
-    {{ contacts[1].name}}
-    <nav class="pt-5">
-      <div class="logo">
-        <img src="./dist/img/medical_logo_1x_light.png" alt="">
+<body>
+  <div id="root">
+    <header>
+      <nav class="pt-5">
+        <div class="logo">
+          <img src="./dist/img/medical_logo_1x_light.png" alt="">
+        </div>
+        <div class="nav-links text-white">
+          <!-- V-FOR + LINK con VUE -->
+          <ul>
+            <li
+              class="text-uppercase pr-6 "
+              v-for='link in navbarItem'>
+              <a  class="text-lightgrey "href="#">{{ link.title }}</a>
+            </li>
+            <!-- <li class="text-uppercase pr-6 text-lightgrey">About</li>
+            <li class="text-uppercase pr-6 text-lightgrey">Departments</li>
+            <li class="text-uppercase pr-6 text-lightgrey">Articles</li> -->
+          </ul>
+          <!-- CLICK SCORRO PAGINA FINO AL FORM -->
+          <button class="text-uppercase">Make appointment</button>
+        </div>
+      </nav>
+      <div class="title text-white">
+        <h1 class="pb-4">Caring <span class="text-btn-color">For Life</span> </h1>
+        <p class="text-lightgrey">Kind words can be short and easy to speak, but their echoes are truly endless. Avada Health focuses on you as if it was our own family.</p>
+        <button class="text-uppercase mt-6">Learn more</button>
       </div>
-      <div class="nav-links text-white">
-        <!-- V-FOR + LINK con VUE -->
+    </header>
+    <main>
+      <section class="welcome">
+        <div class="intro text-center text-pri-color pt-15">
+          <h3 class="pb-5">Welcome to Avada Health</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo</p>
+        </div>
+        <div class="welcome-info text-center text-pri-color pt-10 pb-15">
+          <div class="welcome-card">
+            <!-- UTILIZZO BINDING IMG -->
+            <img src="./dist/img/icon-1.png" alt="">
+            <h4>Same day appointments</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+          </div>
+          <div class="welcome-card">
+            <img src="./dist/img/icon-2.png" alt="">
+            <h4>World class facilities</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+          </div>
+          <div class="welcome-card">
+            <img src="./dist/img/icon-3.png" alt="">
+            <h4>Expert doctors</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+          </div>
+          <div class="welcome-card">
+            <img src="./dist/img/icon-4.png" alt="">
+            <h4>Complementary therapies</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+          </div>
+        </div>
+      </section>
+      <section class="doctors bg-lightgrey pb-20">
+        <div class="intro text-center text-pri-color pt-15">
+          <img src="./dist/img/icon-5.png" alt="">
+          <h3 class="text-uppercase pt-4 pb-6">Meet our doctors</h3>
+          <hr class="text-grey bg-grey mb-6">
+          <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
+        </div>
+        <div class="doctors-info">
+          <div class="doctors-card bg-white">
+            <img src="./dist/img/doctor-1.jpg" alt="">
+            <div class="card-info pt-7 pl-6 pb-7">
+              <h5>Jon Snow</h5>
+              <h6>Anesthesiologist</h6>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <ul>
+                <li><i class="fab fa-facebook-square text-facebook"></i></li>
+                <li><i class="fab fa-twitter-square text-twitter"></i></li>
+                <li><i class="fab fa-instagram-square text-instagram"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="doctors-card bg-white">
+            <img src="./dist/img/doctor-2.jpg" alt="">
+            <div class="card-info pt-7 pl-6 pb-7">
+              <h5>Tony Stark</h5>
+              <h6>Cardiologist</h6>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <ul>
+                <li><i class="fab fa-facebook-square text-facebook"></i></li>
+                <li><i class="fab fa-twitter-square text-twitter"></i></li>
+                <li><i class="fab fa-instagram-square text-instagram"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="doctors-card bg-white">
+            <img src="./dist/img/doctor-3.jpg" alt="">
+            <div class="card-info pt-7 pl-6 pb-7">
+              <h5>Anna Smith</h5>
+              <h6>Nurse Practitioner</h6>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <ul>
+                <li><i class="fab fa-facebook-square text-facebook"></i></li>
+                <li><i class="fab fa-twitter-square text-twitter"></i></li>
+                <li><i class="fab fa-instagram-square text-instagram"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="intro text-center text-pri-color pt-15">
+          <img src="./dist/img/icon-6.png" alt="">
+          <h3 class="text-uppercase pt-4 pb-6">Our Health Services</h3>
+          <hr class="text-grey bg-grey mb-6">
+          <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
+        </div>
+        <div class="services-info text-center text-pri-color">
+          <div class="services-card">
+            <img src="./dist/img/icon-14.png" alt="">
+            <h4>World class facilities</h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+          </div>
+          <div class="services-card">
+            <img src="./dist/img/icon-15.png" alt="">
+            <h4>World class facilities</h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+          </div>
+          <div class="services-card">
+            <img src="./dist/img/icon-16.png" alt="">
+            <h4>World class facilities</h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+          </div>
+          <div class="services-card">
+            <img src="./dist/img/icon-11.png" alt="">
+            <h4>World class facilities</h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+          </div>
+          <div class="services-card">
+            <img src="./dist/img/icon-12.png" alt="">
+            <h4>World class facilities</h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+          </div>
+          <div class="services-card">
+            <img src="./dist/img/icon-13.png" alt="">
+            <h4>World class facilities</h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+          </div>
+        </div>
+      </section>
+      <section class="facilities text-lightgrey">
+        <div class="intro text-center">
+          <img src="./dist/img/icon-7.png" alt="">
+          <h3 class="text-uppercase pt-4 pb-6">Tour our facilities</h3>
+          <hr class="text-grey bg-grey mb-6">
+          <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
+          <img src="./dist/img/play-icon.png" alt="">
+        </div>
+        <div class="facilities-info text-center">
+          <div class="facilities-card bg-card-lightblue">
+            <h4>Emergency Care</h4>
+            <img src="./dist/img/wave-divider.png" alt="">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque</p>
+            <button class="text-uppercase mt-6">Learn more</button>
+          </div>
+          <div class="facilities-card bg-card-blue">
+            <h4>Expert Diagnostics</h4>
+            <img src="./dist/img/wave-divider.png" alt="">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque</p>
+            <button class="text-uppercase mt-6">Learn more</button>
+          </div>
+          <div class="facilities-card bg-card-darkblue">
+            <h4>Superb Rehabilitation</h4>
+            <img src="./dist/img/wave-divider.png" alt="">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque</p>
+            <button class="text-uppercase mt-6">Learn more</button>
+          </div>
+        </div>
+      </section>
+      <section class="appointment">
+        <div class="intro text-center text-lightgrey pt-15">
+          <h3 class=" pt-4 pb-6">Make An Appointment</h3>
+          <hr class="text-grey bg-grey mb-6">
+          <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
+        </div>
+        <div class="appointment-form">
+          <form class="" action="index.html" method="post">
+            <input type="text" name="Name" placeholder="Name*">
+            <input type="email" name="Name" placeholder="Email*">
+            <input type="tel" name="phone" placeholder="Phone Number">
+            <input class="date" type="date" name="Name" placeholder="How can we help?*">
+            <textarea name="name" rows="6" cols="80" placeholder="How can we help?*"></textarea>
+          </form>
+          <button class="text-uppercase" type="button" name="button">Make an appointment</button>
+        </div>
+      </section>
+      <section class="carousel">
+        <div class="carousel-container">
+          <div class="img-card">
+            <img src="./dist/img/client-logos-1.png" alt="">
+            <img src="./dist/img/client-logos-2.png" alt="">
+            <img src="./dist/img/client-logos-3.png" alt="">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container-info pl-15 pt-15 pb-15 text-pri-color">
+        <div class="info-card">
+          <div class="about-us">
+            <img src="./dist/img/medical_logo_1x_dark.png" alt="">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est</p>
+            <div class="learn-more">
+              <p class="text-uppercase">Learn More About Us</p>
+            </div>
+            <ul>
+              <li><i class="fab fa-facebook-square text-facebook"></i></li>
+              <li><i class="fab fa-twitter-square text-twitter"></i></li>
+              <li><i class="fab fa-youtube-square text-youtube"></i></li>
+              <li><i class="fab fa-instagram-square text-instagram"></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="contacts">
+            <h4 class="text-uppercase">Contact Information</h4>
+            <hr class="mt-4 mb-4">
+            <ul>
+              <li> <a href="#"><i class="fas fa-map-marker-alt"></i>121 King Street, London, United Kingdom</a> </li>
+              <li> <a href="#"><i class="fas fa-phone"></i>1 800 458 556</a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="departments">
+            <h4 class="text-uppercase">Medical Departments</h4>
+            <hr class="mt-4 mb-4">
+            <ul>
+              <li> <a href="#"><i class="fas fa-angle-right"></i>Cardiology</a> </li>
+              <li> <a href="#"><i class="fas fa-angle-right"></i>Pediatrics</a> </li>
+              <li> <a href="#"><i class="fas fa-angle-right"></i>Diabetes Care</a> </li>
+              <li> <a href="#"><i class="fas fa-angle-right"></i>Pre-natel Care</a> </li>
+              <li> <a href="#"><i class="fas fa-angle-right"></i>Ultrasound Echocardiogram</a> </li>
+            </ul>
+            <button class="text-uppercase text-grey bg-white mt-4">View our departments</button>
+          </div>
+        </div>
+      </div>
+      <div class="copyright bg-lightgrey pt-5 pl-15 pb-5">
         <ul>
-          <li class="text-uppercase pr-6 text-lightgrey">Home</li>
-          <li class="text-uppercase pr-6 text-lightgrey">About</li>
-          <li class="text-uppercase pr-6 text-lightgrey">Departments</li>
-          <li class="text-uppercase pr-6 text-lightgrey">Articles</li>
+          <li>© Copyright 2012-2020</li>
+          <li>Avada Theme by <span>Theme Fusion</span> </li>
+          <li>All Rights Reserved</li>
+          <li>Powered by <span>Boolean Student</span> </li>
         </ul>
-        <!-- CLICK SCORRO PAGINA FINO AL FORM -->
-        <button class="text-uppercase">Make appointment</button>
       </div>
-    </nav>
-    <div class="title text-white">
-      <h1 class="pb-4">Caring <span class="text-btn-color">For Life</span> </h1>
-      <p class="text-lightgrey">Kind words can be short and easy to speak, but their echoes are truly endless. Avada Health focuses on you as if it was our own family.</p>
-      <button class="text-uppercase mt-6">Learn more</button>
-    </div>
-  </header>
-  <main>
-    <section class="welcome">
-      <div class="intro text-center text-pri-color pt-15">
-        <h3 class="pb-5">Welcome to Avada Health</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo</p>
-      </div>
-      <div class="welcome-info text-center text-pri-color pt-10 pb-15">
-        <div class="welcome-card">
-          <!-- UTILIZZO BINDING IMG -->
-          <img src="./dist/img/icon-1.png" alt="">
-          <h4>Same day appointments</h4>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-        </div>
-        <div class="welcome-card">
-          <img src="./dist/img/icon-2.png" alt="">
-          <h4>World class facilities</h4>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-        </div>
-        <div class="welcome-card">
-          <img src="./dist/img/icon-3.png" alt="">
-          <h4>Expert doctors</h4>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-        </div>
-        <div class="welcome-card">
-          <img src="./dist/img/icon-4.png" alt="">
-          <h4>Complementary therapies</h4>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-        </div>
-      </div>
-    </section>
-    <section class="doctors bg-lightgrey pb-20">
-      <div class="intro text-center text-pri-color pt-15">
-        <img src="./dist/img/icon-5.png" alt="">
-        <h3 class="text-uppercase pt-4 pb-6">Meet our doctors</h3>
-        <hr class="text-grey bg-grey mb-6">
-        <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
-      </div>
-      <div class="doctors-info">
-        <div class="doctors-card bg-white">
-          <img src="./dist/img/doctor-1.jpg" alt="">
-          <div class="card-info pt-7 pl-6 pb-7">
-            <h5>Jon Snow</h5>
-            <h6>Anesthesiologist</h6>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            <ul>
-              <li><i class="fab fa-facebook-square text-facebook"></i></li>
-              <li><i class="fab fa-twitter-square text-twitter"></i></li>
-              <li><i class="fab fa-instagram-square text-instagram"></i></li>
-            </ul>
-          </div>
-        </div>
-        <div class="doctors-card bg-white">
-          <img src="./dist/img/doctor-2.jpg" alt="">
-          <div class="card-info pt-7 pl-6 pb-7">
-            <h5>Tony Stark</h5>
-            <h6>Cardiologist</h6>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            <ul>
-              <li><i class="fab fa-facebook-square text-facebook"></i></li>
-              <li><i class="fab fa-twitter-square text-twitter"></i></li>
-              <li><i class="fab fa-instagram-square text-instagram"></i></li>
-            </ul>
-          </div>
-        </div>
-        <div class="doctors-card bg-white">
-          <img src="./dist/img/doctor-3.jpg" alt="">
-          <div class="card-info pt-7 pl-6 pb-7">
-            <h5>Anna Smith</h5>
-            <h6>Nurse Practitioner</h6>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            <ul>
-              <li><i class="fab fa-facebook-square text-facebook"></i></li>
-              <li><i class="fab fa-twitter-square text-twitter"></i></li>
-              <li><i class="fab fa-instagram-square text-instagram"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="services">
-      <div class="intro text-center text-pri-color pt-15">
-        <img src="./dist/img/icon-6.png" alt="">
-        <h3 class="text-uppercase pt-4 pb-6">Our Health Services</h3>
-        <hr class="text-grey bg-grey mb-6">
-        <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
-      </div>
-      <div class="services-info text-center text-pri-color">
-        <div class="services-card">
-          <img src="./dist/img/icon-14.png" alt="">
-          <h4>World class facilities</h4>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-        </div>
-        <div class="services-card">
-          <img src="./dist/img/icon-15.png" alt="">
-          <h4>World class facilities</h4>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-        </div>
-        <div class="services-card">
-          <img src="./dist/img/icon-16.png" alt="">
-          <h4>World class facilities</h4>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-        </div>
-        <div class="services-card">
-          <img src="./dist/img/icon-11.png" alt="">
-          <h4>World class facilities</h4>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-        </div>
-        <div class="services-card">
-          <img src="./dist/img/icon-12.png" alt="">
-          <h4>World class facilities</h4>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-        </div>
-        <div class="services-card">
-          <img src="./dist/img/icon-13.png" alt="">
-          <h4>World class facilities</h4>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-        </div>
-      </div>
-    </section>
-    <section class="facilities text-lightgrey">
-      <div class="intro text-center">
-        <img src="./dist/img/icon-7.png" alt="">
-        <h3 class="text-uppercase pt-4 pb-6">Tour our facilities</h3>
-        <hr class="text-grey bg-grey mb-6">
-        <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
-        <img src="./dist/img/play-icon.png" alt="">
-      </div>
-      <div class="facilities-info text-center">
-        <div class="facilities-card bg-card-lightblue">
-          <h4>Emergency Care</h4>
-          <img src="./dist/img/wave-divider.png" alt="">
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque</p>
-          <button class="text-uppercase mt-6">Learn more</button>
-        </div>
-        <div class="facilities-card bg-card-blue">
-          <h4>Expert Diagnostics</h4>
-          <img src="./dist/img/wave-divider.png" alt="">
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque</p>
-          <button class="text-uppercase mt-6">Learn more</button>
-        </div>
-        <div class="facilities-card bg-card-darkblue">
-          <h4>Superb Rehabilitation</h4>
-          <img src="./dist/img/wave-divider.png" alt="">
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque</p>
-          <button class="text-uppercase mt-6">Learn more</button>
-        </div>
-      </div>
-    </section>
-    <section class="appointment">
-      <div class="intro text-center text-lightgrey pt-15">
-        <h3 class=" pt-4 pb-6">Make An Appointment</h3>
-        <hr class="text-grey bg-grey mb-6">
-        <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
-      </div>
-      <div class="appointment-form">
-        <form class="" action="index.html" method="post">
-          <input type="text" name="Name" placeholder="Name*">
-          <input type="email" name="Name" placeholder="Email*">
-          <input type="tel" name="phone" placeholder="Phone Number">
-          <input class="date" type="date" name="Name" placeholder="How can we help?*">
-          <textarea name="name" rows="6" cols="80" placeholder="How can we help?*"></textarea>
-        </form>
-        <button class="text-uppercase" type="button" name="button">Make an appointment</button>
-      </div>
-    </section>
-    <section class="carousel">
-
-    </section>
-  </main>
-  <footer>
-    <div class="links">
-
-    </div>
-    <div class="social">
-
-    </div>
-    <div class="copyright">
-
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="./dist/js/dati.js" charset="utf-8"></script>
   <script src="./dist/js/main.js" charset="utf-8"></script>
 
 </body>

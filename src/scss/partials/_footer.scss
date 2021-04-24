@@ -1,0 +1,52 @@
+@import "_aboutUs.scss";
+@import "_copyright";
+
+footer {
+  .container-info {
+    display: flex;
+    .info-card {
+      width: calc(100% / 3 - 10px);
+      padding-right: 30px;
+      .contacts,
+      .departments {
+        hr {
+          background-color: $btn-color;
+          width: 7%;
+          height: 2px;
+          border: none;
+        }
+        li {
+          padding-bottom: 10px;
+          a {
+            color: $primary-color;
+            text-decoration: none;
+            font-size: 13px;
+            i {
+              color: $btn-color;
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+      .departments {
+        li {
+          a {
+            i {
+              font-size: 10px;
+              color: #FFF;
+              background-color: $btn-color;
+              border-radius: 50%;
+              padding: 6px 8px;
+              margin-right: 10px;
+            }
+          }
+        }
+        button {
+          border: 1px solid $primary-color;
+          padding: 15px 30px;
+
+        }
+      }
+    }
+  }
+}
