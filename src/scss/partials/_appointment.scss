@@ -18,7 +18,7 @@ main {
         flex-wrap: wrap;
         justify-content: space-between;
         .date {
-          &::-webkit-datetime-edit { color: $tertiary-color; };
+          &::-webkit-datetime-edit { color: $secondary-color; };
           &::-webkit-calendar-picker-indicator {
             cursor: pointer;
             opacity: 0.8;
@@ -30,26 +30,26 @@ main {
         }
         input,
         textarea {
-          border: 1px solid $tertiary-color;
+          border: 1px solid $secondary-color;
           background-color: inherit;
           padding: 10px;
           margin-bottom: 30px;
           resize: none;
           outline: none;
-          color: $tertiary-color;
+          color: $secondary-color;
           &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: $tertiary-color;
+            color: $secondary-color;
             opacity: 1; /* Firefox */
             font-family: 'Open Sans', sans-serif;
             font-weight: 300;
           }
           :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: $tertiary-color;
+            color: $secondary-color;
             font-family: 'Open Sans', sans-serif;
             font-weight: 300;
           }
           ::-ms-input-placeholder { /* Microsoft Edge */
-            color: $tertiary-color;
+            color: $secondary-color;
             font-family: 'Open Sans', sans-serif;
             font-weight: 300;
           }

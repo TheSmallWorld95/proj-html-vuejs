@@ -1049,7 +1049,7 @@ main .doctors-info .doctors-card .card-info h6 {
   padding-bottom: 35px;
 }
 main .doctors-info .doctors-card .card-info p {
-  color: #bcbcbd;
+  color: #7c858f;
   font-size: 13px;
   padding-bottom: 35px;
 }
@@ -1095,6 +1095,9 @@ main .facilities {
 }
 main .facilities .intro {
   padding: 150px 0;
+}
+main .facilities .intro img {
+  cursor: pointer;
 }
 main .facilities .facilities-info {
   width: 100%;
@@ -1229,12 +1232,18 @@ main .carousel .carousel-container {
   display: flex;
   align-items: center;
 }
-main .carousel .carousel-container .img-card {
-  width: 100%;
-}
 main .carousel .carousel-container .img-card img {
-  width: calc(100% / 3 - 15px);
+  width: 100%;
   height: 100%;
+}
+main .carousel .carousel-container .img-card .first-rotate {
+  transform: rotateY(300deg);
+}
+main .carousel .carousel-container .img-card .second-rotate {
+  transform: rotateY(330deg) translateZ(30px);
+}
+main .carousel .carousel-container .img-card .third-rotate {
+  transform: rotateY(330deg) translateZ(-30px);
 }
 
 footer .about-us img {
@@ -1311,4 +1320,5 @@ footer .container-info .info-card .departments li a i {
 footer .container-info .info-card .departments button {
   border: 1px solid #7c858f;
   padding: 15px 30px;
+  cursor: pointer;
 }

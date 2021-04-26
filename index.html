@@ -23,14 +23,14 @@
             <li
               class="text-uppercase pr-6 "
               v-for='link in navbarItem'>
-              <a  class="text-lightgrey "href="#">{{ link.title }}</a>
+              <a  class="text-lightgrey " :href= "` ${ link.url } `" >{{ link.title }}</a>
             </li>
             <!-- <li class="text-uppercase pr-6 text-lightgrey">About</li>
             <li class="text-uppercase pr-6 text-lightgrey">Departments</li>
             <li class="text-uppercase pr-6 text-lightgrey">Articles</li> -->
           </ul>
           <!-- CLICK SCORRO PAGINA FINO AL FORM -->
-          <button class="text-uppercase">Make appointment</button>
+          <button class="text-uppercase" @click="goto('appointment')">Make appointment</button>
         </div>
       </nav>
       <div class="title text-white">
@@ -77,20 +77,24 @@
           <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
         </div>
         <div class="doctors-info">
-          <div class="doctors-card bg-white">
-            <img src="./dist/img/doctor-1.jpg" alt="">
+          <div
+            class="doctors-card bg-white"
+            v-for='doctor in doctorInfo'>
+            <img :src="`./dist/img/doctor-${doctor.img}.jpg`" alt="">
             <div class="card-info pt-7 pl-6 pb-7">
-              <h5>Jon Snow</h5>
-              <h6>Anesthesiologist</h6>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <h5>{{ doctor.name }}</h5>
+              <h6>{{ doctor.job }}</h6>
+              <p>{{ doctor.description }}</p>
               <ul>
-                <li><i class="fab fa-facebook-square text-facebook"></i></li>
-                <li><i class="fab fa-twitter-square text-twitter"></i></li>
-                <li><i class="fab fa-instagram-square text-instagram"></i></li>
+                <li v-for='social in doctor.socials'>
+                  <a :href="` ${ social.url } `" target="_blank"> <i :class="`fab fa-${ social.name }-square text-${ social.name }`"></i> </a>
+                </li>
+                <!-- <li><i class="fab fa-twitter-square text-twitter"></i></li>
+                <li><i class="fab fa-instagram-square text-instagram"></i></li> -->
               </ul>
             </div>
           </div>
-          <div class="doctors-card bg-white">
+          <!-- <div class="doctors-card bg-white">
             <img src="./dist/img/doctor-2.jpg" alt="">
             <div class="card-info pt-7 pl-6 pb-7">
               <h5>Tony Stark</h5>
@@ -115,7 +119,7 @@
                 <li><i class="fab fa-instagram-square text-instagram"></i></li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
       <section class="services">
@@ -187,7 +191,7 @@
           </div>
         </div>
       </section>
-      <section class="appointment">
+      <section class="appointment" ref="appointment">
         <div class="intro text-center text-lightgrey pt-15">
           <h3 class=" pt-4 pb-6">Make An Appointment</h3>
           <hr class="text-grey bg-grey mb-6">
@@ -195,21 +199,31 @@
         </div>
         <div class="appointment-form">
           <form class="" action="index.html" method="post">
-            <input type="text" name="Name" placeholder="Name*">
-            <input type="email" name="Name" placeholder="Email*">
-            <input type="tel" name="phone" placeholder="Phone Number">
-            <input class="date" type="date" name="Name" placeholder="How can we help?*">
-            <textarea name="name" rows="6" cols="80" placeholder="How can we help?*"></textarea>
+            <input type="text" name="Name" placeholder="Name*" v-model='name'>
+            <input type="email" name="Name" placeholder="Email*" v-model='email'>
+            <input type="tel" name="phone" placeholder="Phone Number" v-model='number'>
+            <input class="date" type="date" name="Name" v-model='date'>
+            <textarea name="name" rows="6" cols="80" placeholder="How can we help?*" v-model='text'></textarea>
           </form>
-          <button class="text-uppercase" type="button" name="button">Make an appointment</button>
+          <button class="text-uppercase" @click='send'>Make an appointment</button>
         </div>
       </section>
       <section class="carousel">
         <div class="carousel-container">
           <div class="img-card">
-            <img src="./dist/img/client-logos-1.png" alt="">
-            <img src="./dist/img/client-logos-2.png" alt="">
-            <img src="./dist/img/client-logos-3.png" alt="">
+            <img  class="first-rotate" src="./dist/img/client-logos-1.png" alt="">
+          </div>
+          <div class="img-card">
+            <img class="second-rotate" src="./dist/img/client-logos-2.png" alt="">
+          </div>
+          <div class="img-card">
+            <img  src="./dist/img/client-logos-3.png" alt="">
+          </div>
+          <div class="img-card">
+            <img class="third-rotate" src="./dist/img/client-logos-4.png" alt="">
+          </div>
+          <div class="img-card">
+            <img class="first-rotate" src="./dist/img/client-logos-3.png" alt="">
           </div>
         </div>
       </section>
@@ -223,11 +237,13 @@
             <div class="learn-more">
               <p class="text-uppercase">Learn More About Us</p>
             </div>
-            <ul>
-              <li><i class="fab fa-facebook-square text-facebook"></i></li>
-              <li><i class="fab fa-twitter-square text-twitter"></i></li>
+            <ul >
+              <li v-for='contact in footerContacts'>
+                <a :href= "` ${ contact.link } `" target="_blank"><i :class="`fab fa-${contact.name}-square text-${contact.name}`"></i></a>
+              </li>
+              <!-- <li><i class="fab fa-twitter-square text-twitter"></i></li>
               <li><i class="fab fa-youtube-square text-youtube"></i></li>
-              <li><i class="fab fa-instagram-square text-instagram"></i></li>
+              <li><i class="fab fa-instagram-square text-instagram"></i></li> -->
             </ul>
           </div>
         </div>
@@ -242,15 +258,19 @@
           </div>
         </div>
         <div class="info-card">
-          <div class="departments">
-            <h4 class="text-uppercase">Medical Departments</h4>
+          <div
+            class="departments"
+            v-for='item in footerItem'>
+            <h4 class="text-uppercase">{{ item.name }}</h4>
             <hr class="mt-4 mb-4">
             <ul>
-              <li> <a href="#"><i class="fas fa-angle-right"></i>Cardiology</a> </li>
-              <li> <a href="#"><i class="fas fa-angle-right"></i>Pediatrics</a> </li>
+              <li v-for='link in item.links'>
+                <a :href= "` ${ link.url } `" ><i class="fas fa-angle-right"></i> {{link.title}} </a>
+              </li>
+              <!-- <li> <a href="#"><i class="fas fa-angle-right"></i>Pediatrics</a> </li>
               <li> <a href="#"><i class="fas fa-angle-right"></i>Diabetes Care</a> </li>
               <li> <a href="#"><i class="fas fa-angle-right"></i>Pre-natel Care</a> </li>
-              <li> <a href="#"><i class="fas fa-angle-right"></i>Ultrasound Echocardiogram</a> </li>
+              <li> <a href="#"><i class="fas fa-angle-right"></i>Ultrasound Echocardiogram</a> </li> -->
             </ul>
             <button class="text-uppercase text-grey bg-white mt-4">View our departments</button>
           </div>

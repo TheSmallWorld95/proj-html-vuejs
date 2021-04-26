@@ -3,6 +3,9 @@ main {
     background: url('../img/paralax-bg-tour-facilities.jpg') no-repeat bottom;
     .intro {
       padding: 150px 0;
+      img {
+        cursor: pointer;
+      }
     }
     .facilities-info {
       @include container-center(100%);
