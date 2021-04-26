@@ -18,6 +18,7 @@
           <img src="./dist/img/medical_logo_1x_light.png" alt="">
         </div>
         <div class="nav-links text-white">
+          <!-- CREAZIONE LINK NAVBAR -->
           <!-- V-FOR + LINK con VUE -->
           <ul>
             <li
@@ -25,9 +26,6 @@
               v-for='link in navbarItem'>
               <a  class="text-lightgrey " :href= "` ${ link.url } `" >{{ link.title }}</a>
             </li>
-            <!-- <li class="text-uppercase pr-6 text-lightgrey">About</li>
-            <li class="text-uppercase pr-6 text-lightgrey">Departments</li>
-            <li class="text-uppercase pr-6 text-lightgrey">Articles</li> -->
           </ul>
           <!-- CLICK SCORRO PAGINA FINO AL FORM -->
           <button class="text-uppercase" @click="goto('appointment')">Make appointment</button>
@@ -47,7 +45,6 @@
         </div>
         <div class="welcome-info text-center text-pri-color pt-10 pb-15">
           <div class="welcome-card">
-            <!-- UTILIZZO BINDING IMG -->
             <img src="./dist/img/icon-1.png" alt="">
             <h4>Same day appointments</h4>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
@@ -77,6 +74,8 @@
           <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
         </div>
         <div class="doctors-info">
+          <!-- CREAZIONE CARD DOTTORI CON VUE -->
+          <!-- INCLUDE LINK SOCIAL CON APERTURA NUOVA SCHEDA -->
           <div
             class="doctors-card bg-white"
             v-for='doctor in doctorInfo'>
@@ -89,37 +88,9 @@
                 <li v-for='social in doctor.socials'>
                   <a :href="` ${ social.url } `" target="_blank"> <i :class="`fab fa-${ social.name }-square text-${ social.name }`"></i> </a>
                 </li>
-                <!-- <li><i class="fab fa-twitter-square text-twitter"></i></li>
-                <li><i class="fab fa-instagram-square text-instagram"></i></li> -->
               </ul>
             </div>
           </div>
-          <!-- <div class="doctors-card bg-white">
-            <img src="./dist/img/doctor-2.jpg" alt="">
-            <div class="card-info pt-7 pl-6 pb-7">
-              <h5>Tony Stark</h5>
-              <h6>Cardiologist</h6>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-              <ul>
-                <li><i class="fab fa-facebook-square text-facebook"></i></li>
-                <li><i class="fab fa-twitter-square text-twitter"></i></li>
-                <li><i class="fab fa-instagram-square text-instagram"></i></li>
-              </ul>
-            </div>
-          </div>
-          <div class="doctors-card bg-white">
-            <img src="./dist/img/doctor-3.jpg" alt="">
-            <div class="card-info pt-7 pl-6 pb-7">
-              <h5>Anna Smith</h5>
-              <h6>Nurse Practitioner</h6>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-              <ul>
-                <li><i class="fab fa-facebook-square text-facebook"></i></li>
-                <li><i class="fab fa-twitter-square text-twitter"></i></li>
-                <li><i class="fab fa-instagram-square text-instagram"></i></li>
-              </ul>
-            </div>
-          </div> -->
         </div>
       </section>
       <section class="services">
@@ -198,6 +169,8 @@
           <p class="pb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>
         </div>
         <div class="appointment-form">
+          <!-- CREAZIONE FORM CHE UNA VOLTA COMPILATO CLICCANDO IL BOTTONE
+          SI CANCELLANO I DATI -->
           <form class="" action="index.html" method="post">
             <input type="text" name="Name" placeholder="Name*" v-model='name'>
             <input type="email" name="Name" placeholder="Email*" v-model='email'>
@@ -209,6 +182,7 @@
         </div>
       </section>
       <section class="carousel">
+        <!-- POSSIBILITA' DI FARE UN VERO SLIDER -->
         <div class="carousel-container">
           <div class="img-card">
             <img  class="first-rotate" src="./dist/img/client-logos-1.png" alt="">
@@ -252,7 +226,11 @@
             <h4 class="text-uppercase">Contact Information</h4>
             <hr class="mt-4 mb-4">
             <ul>
-              <li> <a href="#"><i class="fas fa-map-marker-alt"></i>121 King Street, London, United Kingdom</a> </li>
+              <!-- POSSIBILITA' DI RENDERLO DINAMICO IN BASE ALL'INDIRIZZO -->
+              <li> <a href="https://www.google.it/maps/place/121+King+St,+Hammersmith,+London+W6+9JG,+Regno+Unito/@51.4924683,-0.2323728,17z/data=!3m1!4b1!4m5!3m4!1s0x48760e48221944e1:0xee0d9e6eec2d2523!8m2!3d51.492465!4d-0.2301841">
+                <i class="fas fa-map-marker-alt"></i>
+                121 King Street, London, United Kingdom</a>
+              </li>
               <li> <a href="#"><i class="fas fa-phone"></i>1 800 458 556</a> </li>
             </ul>
           </div>
@@ -264,13 +242,10 @@
             <h4 class="text-uppercase">{{ item.name }}</h4>
             <hr class="mt-4 mb-4">
             <ul>
+              <!-- CREAZIONE LINK FOOTER CON VUE -->
               <li v-for='link in item.links'>
                 <a :href= "` ${ link.url } `" ><i class="fas fa-angle-right"></i> {{link.title}} </a>
               </li>
-              <!-- <li> <a href="#"><i class="fas fa-angle-right"></i>Pediatrics</a> </li>
-              <li> <a href="#"><i class="fas fa-angle-right"></i>Diabetes Care</a> </li>
-              <li> <a href="#"><i class="fas fa-angle-right"></i>Pre-natel Care</a> </li>
-              <li> <a href="#"><i class="fas fa-angle-right"></i>Ultrasound Echocardiogram</a> </li> -->
             </ul>
             <button class="text-uppercase text-grey bg-white mt-4">View our departments</button>
           </div>

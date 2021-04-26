@@ -1,11 +1,17 @@
+
+// CENTRAMENTO E LARGHEZZA ELEMENTI
 @mixin container-center($width) {
   width: $width;
   margin: 0 auto;
 }
+
+// COLORE TESTO E SFONDO BOTTONE
 @mixin btn ($color, $bg-color) {
   color: $color;
   background-color: $bg-color;
 }
+
+// REPLICA DI ALCUNE CARD CON CARATTERISTICHE SIMILI
 @mixin card-conteiner($name, $width, $img-width) {
   display: flex;
   flex-wrap: wrap;

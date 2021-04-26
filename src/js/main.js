@@ -131,6 +131,7 @@ var app = new Vue (
           link: 'https://www.instagram.com/',
         },
       ],
+      // COMPILAZIONE INPUT FORM CON V-MODEL
       name: '',
       email: '',
       number: '',
@@ -140,11 +141,13 @@ var app = new Vue (
     mounted() {
     },
     methods: {
+      // SPOSTARSI ALL'INTERNO DELLA PAGINA CON IL REF SU UN ELEMENTO
       goto: function(refName) {
         var element = this.$refs[refName];
         var top = element.offsetTop;
         window.scrollTo(0, top);
       },
+      // AZZERAMENTO DCEL FORM UNA VOLTA INVIATO
       send: function () {
         this.name = '';
         this.email = '';
